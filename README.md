@@ -20,8 +20,23 @@ VS Code에서 Spring Boot Maven 프로젝트를 생성하고 실행하는 과정
 
 1. VS Code에서 Command Palette를 엽니다. (Windows: Ctrl+Shift+P)
 2. `Spring Initializr: Create a Maven Project`를 선택합니다.
-3. 언어는 `Java`, 패키징은 `Jar`, Java 버전을 선택합니다.
-4. Group/Artifact/Package 정보를 입력합니다.
+3. 언어는 `Java`, 패키징은 `Jar`로 선택하고 Java 버전은 최신 버전 바로 아래 메이저 버전을 사용합니다.
+4. Group/Artifact/Package 정보를 아래 예시처럼 입력합니다.
+
+예시
+
+- Group: `com.ubisam`
+- Artifact: `example1`
+- Package: `com.ubisam.example1`
+
+입력하면 프로젝트 폴더 구조가 다음과 같이 만들어집니다.
+
+```
+Java
+└─ com.ubisam
+	└─ example1
+		└─ com.ubisam.example1
+```
 
 ## 4) Dependencies 선택
 
@@ -65,6 +80,10 @@ logging.level.org.hibernate.orm.jdbc.bind=TRACE
 프로젝트 루트에서 아래 명령어로 실행합니다.
 
 ```powershell
+# Windows
+.\mvnw spring-boot:run
+
+# Linux/macOS
 ./mvnw spring-boot:run
 ```
 
